@@ -1,0 +1,16 @@
+extends layout/main-layout.pug 
+block styles
+    link(rel="stylesheet" href="/css/user.css")
+
+block content
+    main
+        h1 REGISTER USERS
+        .container
+            each name in userName
+                .profile 
+                    img(src="/images/user.png" alt="UserImage")
+                    div 
+                        h3 USER's DETAILS
+                        .profile__userdetails
+                            h4 UserName: #{name.User}
+                            h4 Age: #{name.Age}yrs
